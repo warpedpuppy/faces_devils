@@ -1,21 +1,38 @@
 import React from 'react';
 import './Home.css';
 import {connect} from 'react-redux';
-import { addItem } from '../actions/index.js';
-
+import { addFace, addDevil } from '../actions/index.js';
+import Character from '../components/Character';
+import Devil from '../components/Devil';
 class Home extends React.Component {
 	constructor(props){
 		super(props);
 	}
-	addItemHandler(){
-		this.props.dispatch(addItem(5))
+	addFaceHandler(){
+		this.props.dispatch(addFace())
+	}
+	addDevilHandler(){
+		this.props.dispatch(addDevil())
 	}
 	render () {
+		let devils = [];
+		for(let i = 0; i < this.props.devils; i ++){
+			devils.push(<Devil key={i} />)
+		}
+		let faces = [];
+		for(let i = 0; i < this.props.faces; i ++){
+			faces.push(<Character key={i} />)
+		}
 		return (
 			<div>
-		      <h1>home</h1>
-		      <button onClick={(e) => this.addItemHandler()} >add item</button>
-		      {this.props.items}
+		      <div className="buttonContainer">
+		      <button className='homeButton' onClick={(e) => this.addFaceHandler()} >add face</button>
+		      <button className='homeButton' onClick={(e) => this.addDevilHandler()} >add devil</button>
+		      </div>
+		      <div className="pool">
+		      {devils}
+		      {faces}
+		      </div>
 	      </div>
 	    );
 	}
@@ -23,7 +40,8 @@ class Home extends React.Component {
 }
 
 export const mapStateToProps = state => ({
-    items: state.items
+    faces: state.faces,
+    devils: state.devils
 });
 
 export default connect(mapStateToProps)(Home);

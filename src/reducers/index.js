@@ -1,26 +1,24 @@
-import {ADD_ITEM, UPDATE_ITEM, DELETE_ITEM} from '../actions';
+import {ADD_FACE, ADD_DEVIL} from '../actions';
 
 const initialState = {
-    items: [1,2,3,4]
+    faces: 6,
+    devils: 8
 };
 
-export const crudReducer = (state=initialState, action) => {
-    if (action.type === ADD_ITEM) {
-        return Object.assign({}, state, {
-            items: [...state.items, action.item]
+export const gameReducer = (state=initialState, action) => {
+    if (action.type === ADD_FACE) {
+        let newFaces = state.faces +1;
+        let newObj = Object.assign({}, state, {
+            faces: newFaces
         });
+        return newObj;
     }
-    else if (action.type === UPDATE_ITEM) {
-        return Object.assign({}, state, {
-            items: state.items.map(item =>
-                item.id === action.item.id ? action.item : item
-            )
-        });
-    }
-    else if (action.type === DELETE_ITEM) {
-        return Object.assign({}, state, {
-            items: state.items.filter(item => item.id !== action.item.id)
-        });
+    else if (action.type === ADD_DEVIL) {
+         let newDevils = state.devils + 1;
+         let newObj = Object.assign({}, state, {
+            devils: newDevils
+         });
+        return newObj;
     }
     return state;
 };

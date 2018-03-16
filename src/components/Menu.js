@@ -22,7 +22,7 @@ export default class Menu extends Component {
 			<div>
 				<nav>
 					<div className="not-links">
-						<h1>site title</h1>
+						<h1>not a clue</h1>
 						<div className="hamburger" onClick={() => this.showDropDown()}>
 							<span></span>
 							<span></span>

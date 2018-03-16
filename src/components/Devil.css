@@ -1,0 +1,9 @@
+.devilDiv {display: inline-block;}
+.devil {width:100px;}
+.d-cls-1{fill:red;}
+.d-cls-1,
+.d-cls-2,
+.d-cls-3{stroke:#000;stroke-miterlimit:10;}
+.d-cls-1,
+.d-cls-2{stroke-width:5px;}
+.d-cls-3{fill:none;stroke-width:9px;}

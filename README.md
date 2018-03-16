@@ -1,3 +1,3 @@
-<h1>generic react, redux, react router set up</h1>
+<h1>just messing around with svgs</h1>
 
-<p>I've set this up waaaaay too many times.  Maybe this'll help me avoid that in the future</p>
+<img src="https://i.imgur.com/VjM9eJS.png" style='display: block; margin:10px auto' />
