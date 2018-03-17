@@ -1,17 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Devil.css';
 
-export default class Devil extends Component {
-	  constructor(props) {
-		super(props);
-		
-	  }
-	  
-	  render() {
+export default function Devil (props) {
 
 	    return (
-			<div className='devilDiv'>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.74 252.61" className="devil">
+
+				<svg xmlns="http://www.w3.org/2000/svg" ref={props.setRef} viewBox="0 0 238.74 252.61" className="devil">
 				<g id="Layer_2" data-name="Layer 2">
 				<g id="Layer_1-2" data-name="Layer 1">
 				<path className="d-cls-1" d="M236.24,137.11A112.93,112.93,0,1,1,174.58,36.42,113,113,0,0,1,236.24,137.11Z"/>
@@ -23,7 +17,5 @@ export default class Devil extends Component {
 				</g>
 				</g>
 				</svg>
-			</div>
 	    );
-	  }
 }

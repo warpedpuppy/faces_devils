@@ -1,16 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Character.css';
-export default class Character extends Component {
-	  constructor(props) {
-		super(props);
-		
-	  }
-	  
-	  render() {
+export default function Character (props) {
 
 	    return (
-			<div className='charDiv'>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231 231" className="character">
+				<svg xmlns="http://www.w3.org/2000/svg" ref={props.setRef} viewBox="0 0 231 231" className="character">
 				<g id="Layer_2" data-name="Layer 2">
 				<g id="Layer_1-2" data-name="Layer 1">
 				<circle className="cls-1" cx="115.5" cy="115.5" r="113"/>
@@ -21,7 +14,7 @@ export default class Character extends Component {
 				</g>
 				</g>
 				</svg>
-			</div>
+
 	    );
-	  }
+	  
 }

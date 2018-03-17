@@ -1,20 +1,22 @@
 import {ADD_FACE, ADD_DEVIL} from '../actions';
 
 const initialState = {
-    faces: 6,
-    devils: 8
+    faces: [],
+    devils: []
 };
 
 export const gameReducer = (state=initialState, action) => {
     if (action.type === ADD_FACE) {
-        let newFaces = state.faces +1;
+        let newFaces = state.faces.slice();
+        newFaces.push(action.item);
         let newObj = Object.assign({}, state, {
             faces: newFaces
         });
         return newObj;
     }
     else if (action.type === ADD_DEVIL) {
-         let newDevils = state.devils + 1;
+         let newDevils = state.devils.slice();
+         newDevils.push(action.item);
          let newObj = Object.assign({}, state, {
             devils: newDevils
          });

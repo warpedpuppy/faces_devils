@@ -6,3 +6,7 @@
 	border-radius: 10px;
 	outline: none;
 }
+.pool {
+	height:100vw;
+	border:1px solid green;
+}

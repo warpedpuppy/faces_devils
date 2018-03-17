@@ -1,5 +1,5 @@
 .devilDiv {display: inline-block;}
-.devil {width:100px;}
+.devil {width:100px;position:relative;}
 .d-cls-1{fill:red;}
 .d-cls-1,
 .d-cls-2,
