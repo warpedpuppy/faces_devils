@@ -1,10 +1,10 @@
-import {TweenLite, TweenMax, Elastic} from 'gsap';
+import {TweenMax, Elastic} from 'gsap';
 
 
 export default {
 	
 	fall(target) {
-		let fallSpeed = Math.random()*30+1;
-		return TweenMax.to(target, fallSpeed, { top:'200px', ease:Elastic.easeOut})
+		let fallSpeed = Math.random()*2+1;
+		return TweenMax.from(target, fallSpeed, { top:'200px', left:'200px', ease:Elastic.easeOut})
 	}
 }

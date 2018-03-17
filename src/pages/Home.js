@@ -6,7 +6,6 @@ import Character from '../components/Character';
 import Devil from '../components/Devil';
 import animation from '../animation';
 
-let arr = [];
 class Home extends React.Component {
 	constructor(props){
 		super(props);
@@ -46,8 +45,7 @@ class Home extends React.Component {
 		      <button className='homeButton' onClick={(e) => this.addDevilHandler()} >add devil</button>
 		      </div>
 		      <div className="pool">
-			      {this.props.devils}
-			      {this.props.faces}
+			      {this.props.both}
 		      </div>
 	      </div>
 	    );
@@ -57,7 +55,8 @@ class Home extends React.Component {
 
 export const mapStateToProps = state => ({
     faces: state.faces,
-    devils: state.devils
+    devils: state.devils,
+    both: state.both
 });
 
 export default connect(mapStateToProps)(Home);
