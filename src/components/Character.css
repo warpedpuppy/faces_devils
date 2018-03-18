@@ -1,7 +1,4 @@
-.charDiv {
-	display:inline-block;
-}
-.character {width:100px;position:relative;}
+.character {position:absolute;bottom:0;}
 .cls-1{fill:#ff0;}
 .cls-1,
 .cls-2,

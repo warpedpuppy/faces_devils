@@ -1,10 +1,12 @@
-import {TweenMax, Elastic} from 'gsap';
+import {TimelineMax, Bounce} from 'gsap';
 
 
 export default {
 	
 	fall(target) {
-		let fallSpeed = Math.random()*2+1;
-		return TweenMax.from(target, fallSpeed, { top:'200px', left:'200px', ease:Elastic.easeOut})
+		let fallSpeed = Math.random()*1+1;
+		let tl = new TimelineMax();
+		tl.to(target,fallSpeed, {bottom:'500px'});
+		tl.to(target, fallSpeed, {bottom:'0',  ease:Bounce.easeOut});
 	}
 }

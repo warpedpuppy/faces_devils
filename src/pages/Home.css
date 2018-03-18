@@ -7,6 +7,10 @@
 	outline: none;
 }
 .pool {
-	height:100vw;
-	border:1px solid green;
+	height:100vh;
+	border:10px solid green;
+	position: fixed;
+	top:0;
+	width:100vw;
+	z-index: -1;
 }
